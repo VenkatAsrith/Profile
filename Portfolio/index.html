@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venkat Asrith - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.0/dist/gsap.min.js"></script>
+</head>
+<body>
+    <!-- 3D Background Canvas -->
+    <!-- Removed the background canvas for a cleaner look -->
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#home">
+                <span id="va-logo-3d" style="width:32px;height:32px;display:inline-block;margin-right:8px;"></span>
+                VA
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with 3D Animation -->
+    <section id="home" class="hero-section position-relative" style="padding: 32px 0 16px 0; min-height: unset;">
+        <div id="hero-3d-bg" class="position-absolute top-0 start-0 w-100 h-100" style="z-index:0;"></div>
+        <div class="container position-relative" style="z-index:2;">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <h1 id="animatedVenkatAsrith" class="display-4 fw-bold text-light mb-2" style="letter-spacing: 0.05em; text-shadow: 0 2px 16px rgba(0,0,0,0.25); font-style: italic;">Venkat Asrith</h1>
+                    <h2 class="fs-4 fw-semibold text-light mb-2" style="text-shadow: 0 2px 16px rgba(0,0,0,0.25);">Full Stack Developer & AI Enthusiast</h2>
+                    <p class="hero-quote fs-5 fw-semibold text-light mb-2">Crafting digital experiences with modern technologies.</p>
+                    <div class="d-flex justify-content-center gap-3 mt-2 mb-2">
+                        <a href="https://github.com/VenkatAsrith" target="_blank" class="fs-2 text-light social-icon-link"><i class="bi bi-github"></i></a>
+                        <a href="https://www.linkedin.com/in/venkat-asrith" target="_blank" class="fs-2 text-primary social-icon-link"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://wa.me/919121857591" target="_blank" class="fs-2 text-success social-icon-link"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <!-- 3D DNA/Robot Animation Canvas -->
+                    <div id="dna-robot-animation" style="width:100%;height:400px;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <p class="lead">I'm a passionate Full Stack Developer and 2nd year CSE student at JNTUH College of Engineering Sulthanpur, specializing in AI and web development.</p>
+                        <p>With a strong foundation in both front-end and back-end technologies, I strive to build efficient and user-friendly solutions while exploring the exciting world of artificial intelligence.</p>
+                        <div class="stats-container">
+                            <div class="stat-item">
+                                <h3>2+</h3>
+                                <p>Years Learning</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>10+</h3>
+                                <p>Projects Completed</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>AI</h3>
+                                <p>Specialization</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <div class="image-container">
+                            <img src="IMG_20250314_124405994.jpg" alt="Venkat Asrith" class="img-fluid rounded">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <h4 class="mb-4">Worked and Done Projects</h4>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card text-center">
+                        <div class="project-image mb-3">
+                            <i class="bi bi-bar-chart-steps display-1 text-primary"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>College Predictor</h3>
+                            <p>A comprehensive college prediction system for engineering aspirants.</p>
+                            <div class="project-tags">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                            </div>
+                            <a href="../CollegePredictor/index.html" class="btn btn-primary mt-3" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card text-center">
+                        <div class="project-image mb-3">
+                            <i class="bi bi-cloud-sun display-1 text-info"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>WeatherApp</h3>
+                            <p>Get real-time weather updates for any location.</p>
+                            <div class="project-tags">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                            </div>
+                            <a href="../WeatherApp/index.html" class="btn btn-primary mt-3" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card text-center">
+                        <div class="project-image mb-3">
+                            <i class="bi bi-person-check display-1 text-success"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Smart Attendance</h3>
+                            <p>Automated attendance system using AI and modern web tech.</p>
+                            <div class="project-tags">
+                                <span>AI</span><span>Web</span>
+                            </div>
+                            <a href="#" class="btn btn-primary mt-3 disabled">Coming Soon</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card text-center">
+                        <div class="project-image mb-3">
+                            <i class="bi bi-calculator display-1 text-warning"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>SGPA Calculator <span class="badge bg-success ms-2">Java AWT</span></h3>
+                            <p>A desktop application to calculate SGPA, built using Java's Abstract Window Toolkit (AWT).</p>
+                            <div class="project-tags">
+                                <span>Java</span><span>AWT</span>
+                            </div>
+                            <button class="btn btn-outline-success mt-3" data-bs-toggle="modal" data-bs-target="#sgpaOutputModal">Show Output</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h4 class="mt-5 mb-4">Menu Card</h4>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card text-center">
+                        <div class="project-image mb-3">
+                            <i class="bi bi-list-task display-1 text-secondary"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>MenuCard</h3>
+                            <p>One of my earliest web development projects: a digital menu card.</p>
+                            <div class="project-tags">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                            </div>
+                            <button class="btn btn-outline-primary mt-3 me-2" data-bs-toggle="modal" data-bs-target="#menuSourceModal">View Source Code</button>
+                            <a href="../Menucard/MenuCard.html" class="btn btn-outline-success mt-3" target="_blank">Run Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h4 class="mt-5 mb-4">Coming Soon</h4>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card text-center">
+                        <div class="project-image mb-3">
+                            <i class="bi bi-newspaper display-1 text-info"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>News API</h3>
+                            <p>Stay updated with the latest news headlines and stories.</p>
+                            <div class="project-tags">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                            </div>
+                            <a href="#" class="btn btn-primary mt-3 disabled">Coming Soon</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card text-center">
+                        <div class="project-image mb-3">
+                            <i class="bi bi-train-front display-1 text-warning"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Train-2</h3>
+                            <p>Interactive web-based project for learning and simulation.</p>
+                            <div class="project-tags">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                            </div>
+                            <a href="#" class="btn btn-primary mt-3 disabled">Coming Soon</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card text-center">
+                        <div class="project-image mb-3">
+                            <i class="bi bi-flower1 display-1 text-success"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Crop Genius</h3>
+                            <p>AI-powered crop recommendation and management tool for farmers.</p>
+                            <div class="project-tags">
+                                <span>AI</span><span>Web</span>
+                            </div>
+                            <a href="#" class="btn btn-primary mt-3 disabled">Upcoming</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My First Works Section -->
+    <section id="firstworks" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">My First Works</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card text-center">
+                        <div class="project-image mb-3">
+                            <i class="bi bi-list-task display-1 text-secondary"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>MenuCard</h3>
+                            <p>One of my earliest web development projects: a digital menu card.</p>
+                            <div class="project-tags">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                            </div>
+                            <a href="C:/Users/venkat asrith/OneDrive/Documents/Web development/MenuCard/index.html" class="btn btn-outline-primary mt-3" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="skills-container">
+                        <div class="skill-item card bg-primary bg-opacity-10 mb-4 border-0 animate__animated animate__fadeInLeft">
+                            <div class="card-body">
+                                <h4 class="text-primary">Frontend Development</h4>
+                                <p class="text-dark">Experienced in building responsive, user-friendly interfaces using modern frameworks and best practices. I enjoy creating seamless user experiences and pixel-perfect designs.</p>
+                            </div>
+                        </div>
+                        <div class="skill-item card bg-success bg-opacity-10 mb-4 border-0 animate__animated animate__fadeInLeft animate__delay-1s">
+                            <div class="card-body">
+                                <h4 class="text-success">Backend Development</h4>
+                                <p class="text-dark">Proficient in server-side development, RESTful APIs, and database management. I focus on building scalable, secure, and efficient backend systems.</p>
+                            </div>
+                        </div>
+                        <div class="skill-item card bg-info bg-opacity-10 mb-4 border-0 animate__animated animate__fadeInLeft animate__delay-2s">
+                            <div class="card-body">
+                                <h4 class="text-info">AI & Machine Learning</h4>
+                                <p class="text-dark">Actively working on AI projects, including smart attendance and crop recommendation systems. Passionate about leveraging data and algorithms to solve real-world problems.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="bi bi-envelope"></i>
+                            <h4>Email</h4>
+                            <p>venkatasrith@gmail.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="bi bi-phone"></i>
+                            <h4>Phone</h4>
+                            <p>+91 9121857591</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="bi bi-geo-alt"></i>
+                            <h4>Location</h4>
+                            <p>Hyderabad, India</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <form id="contact-form" class="contact-form">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaborate Section -->
+    <section id="collaborate" class="section-padding">
+        <div class="container text-center">
+            <h2 class="section-title">Collaborate with Venkat Asrith</h2>
+            <p class="lead mb-4">Interested in working together on innovative projects or research? Let's connect and create something impactful!</p>
+            <a href="mailto:venkatasrith@gmail.com" class="btn btn-primary btn-lg me-3"><i class="bi bi-envelope"></i> Email Me</a>
+            <a href="https://wa.me/919121857591" class="btn btn-success btn-lg"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 Venkat Asrith. All rights reserved.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="social-links">
+                        <a href="https://github.com/VenkatAsrith" target="_blank"><i class="bi bi-github"></i></a>
+                        <a href="https://www.linkedin.com/in/venkat-asrith" target="_blank"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://wa.me/919121857591" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SGPA Output Modal -->
+    <div class="modal fade" id="sgpaOutputModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">SGPA Calculator - Output</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="../SgpaCalculator/sgpa_output.png" alt="SGPA Calculator Output" class="img-fluid rounded mb-3" onerror="this.style.display='none'">
+                    <pre class="bg-dark text-light p-3 rounded">Sample Output:
+Enter marks for 6 subjects:
+85 90 78 88 92 80
+SGPA: 8.7
+Grade: A</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- MenuCard Source Code Modal -->
+    <div class="modal fade" id="menuSourceModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">MenuCard - Source Code (HTML/CSS/JS)</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <pre style="max-height:60vh;overflow:auto;"><code id="menuCardCode"></code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
